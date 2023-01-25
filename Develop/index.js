@@ -1,7 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-console.log('readme gen running');
+const MarkDown =  require('./utils/generateMarkdown.js');
+const fs = require('fs');
 // TODO: Create an array of questions for user input
+
 //Application questions
 const questions = [
     {
@@ -16,6 +18,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'usage',
+        message: '',
+    },
+    {
+        type: 'input',
         name: 'installation',
         message: 'What are the steps required to install your project?',
     },
@@ -26,8 +33,22 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'email',
+        message: 'email address?',
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Github?',
+    },
+    {
+        type: 'list',
         name: 'license',
         message: 'What license does your project use?',
+        choices: ['MIT', 'ISC', 'GNUPLv3'],
+        filter(val) {
+            return val.toLowerCase();
+        }
     },
 ];
 
@@ -42,11 +63,11 @@ function writeToFile(fileName, data) {}
 
 function runQuery() {
         return inquirer.prompt(questions)
-        .then((answers) => {
-            console.log(answers)
-            return answers
+        .then((data) => {
+           MarkDown.generateMarkdown(data)
+           console.log(data)
         })
-        .catch((error)=>{
+        .catch((error)=> {
             console.log(error)
         })
     }

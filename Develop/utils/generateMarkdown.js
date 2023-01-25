@@ -13,12 +13,11 @@ class MarkDown {
     - [Installation](#Installation)
 
     ## Usage
-    ${data.usage}
 
     ## Credits
     ${data.credits}
 
-    ## Questions
+    ## Contact
     ${data.email}
     ${data.github}
 
@@ -43,4 +42,4 @@ function renderLicenseSection(license) {}
 
 
 
-module.exports = generateMarkdown;
+module.exports = MarkDown;
