@@ -5,10 +5,39 @@ console.log('readme gen running');
 const questions = [
     {
         type: 'input',
+        name: 'title',
         message: 'What is the name of your project?',
-        default: 'Node.js Professional Readme Generator'
-        //validate input?
-    }
+    }, 
+    {
+        type: 'input',
+        name: 'description',
+        message: 'What is the description of your project?',
+    },
+    {
+        type: 'input',
+        name: 'problem',
+        message: 'What problem does this project solve?',
+    },
+    {
+        type: 'input',
+        name: 'learn',
+        message: 'What did you learn? ',
+    },
+    {
+        type: 'input',
+        name: 'motivation',
+        message: 'What was the motivation for this project? ',
+    },
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What was the motivation for this project? ',
+    },
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What was the motivation for this project? ',
+    },
 ];
 
 // TODO: Create a function to write README file
