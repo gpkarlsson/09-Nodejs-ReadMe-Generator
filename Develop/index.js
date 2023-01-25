@@ -16,21 +16,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'problem',
-        message: 'What problem does this project solve?',
-    },
-    {
-        type: 'input',
-        name: 'learn',
-        message: 'What did you learn?',
-    },
-    {
-        type: 'input',
-        name: 'motivation',
-        message: 'What was the motivation for this project?',
-    },
-    {
-        type: 'input',
         name: 'installation',
         message: 'What are the steps required to install your project?',
     },
